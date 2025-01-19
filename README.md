@@ -1,4 +1,4 @@
-# Marcadores EWW (Personalización de escritorio con EWW)
+# Personalización de escritorio con EWW
 
 Este proyecto tiene como objetivo simplificar y personalizar el entorno de escritorio usando EWW (Elvain's Window Widgets). Proporciona una interfaz con "marcadores" o "stickers" que pueden abrirse y cerrarse fácilmente, junto con un menú personalizado y la capacidad de manejar ventanas flotantes de información.
 
@@ -88,4 +88,7 @@ Este proyecto incluye iconos (imágenes) para los botones de los marcadores, los
 ![2025-01-19-201132_hyprshot](https://github.com/user-attachments/assets/2fcaa6a2-3167-49db-9041-1f55d0f7a0d6)
 
 ## Video de funcionamiento
+
+
+https://github.com/user-attachments/assets/9f0aca12-6cab-48c3-80f0-e7c6bd349ab0
 
