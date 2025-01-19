@@ -1,0 +1,1171 @@
+;; **
+;; ** Widgets config for EWW
+;; ** Created by : @adi1090x
+;; **
+
+;; ** Variables ***********************************************************************
+
+;; Workspace vars
+(defpoll WMS :interval "1s" `wmctrl -d | grep '*' | cut -d ' ' -f13`)
+
+;; Time vars
+(defpoll TIME :interval "5s" `date +\"%I:%M %p\"`)
+(defpoll DATE :interval "5s" `date +\"%A %d %B\"`)
+
+;; Weather vars
+(defpoll ICON :interval "15m" `scripts/weather_info --icon`)
+(defpoll TEMP :interval "15m" `scripts/weather_info --temp`)
+(defpoll HEX :interval "15m" `scripts/weather_info --hex`)
+
+;; Music vars
+(defpoll SONG :interval "1s" `scripts/music_info --song`)
+(defpoll ARTIST :interval "1s" `scripts/music_info --artist`)
+(defpoll COVER :interval "1s" `scripts/music_info --cover`)
+(defpoll STATUS :interval "1s" `scripts/music_info --status`)
+
+;; Mail vars
+(defpoll MAILS :interval "5m" `scripts/mails`)
+
+;; Battery vars
+(defpoll BATICON :interval "1m" `scripts/battery --icon`)
+(defpoll BATPERC :interval "1m" `scripts/battery --perc`)
+
+;; Volume vars
+(defpoll VOLICON :interval "1s" `scripts/volume --icon`)
+(defpoll VOLUME :interval "1s" `scripts/volume --get`)
+
+;; Network
+(defpoll WIFIICON :interval "10s" `scripts/check-network --icon`)
+(defpoll NETSTAT :interval "10s" `scripts/check-network --stat`)
+
+;; User
+(defvar IMAGE "images/profile.jpg")
+(defpoll USER :interval "10m" `whoami`)
+
+;; ** Widgets *************************************************************************
+
+
+
+;; search3
+(defwidget search3 [] 
+		(box :class "z"
+			(box :orientation "h" :spacing 7 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "infotext" :halign "" :text "")				
+(button :style "background-image: url('images/icons/menu.svg');" :class "appicon" :onclick "scripts/widget_search --menus" :dblclick "scripts/widget_search --captura" ))))
+	
+
+;; flechaup
+(defwidget flechaup [] 
+		(box :class "z"
+			(box :orientation "h" :spacing 30 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"				
+(label :class "" :halign "" :text "     ")
+(button :style "background-image: url('images/icons/f1.svg');" :class "flecha" :onclick "scripts/widget_search --marcadores2" ))))
+	
+;; flechad
+(defwidget flechad [] 
+		(box :class "z"
+			(box :orientation "h" :spacing 30 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"				
+(label :class "" :halign "" :text "     ")
+(button :style "background-image: url('images/icons/f2.svg');" :class "flecha" :onclick "scripts/widget_search --marcadores1"  ))))
+	
+
+
+;; marcador1
+(defwidget marcador1 [] 
+		(box :class "a"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/a.svg');" :class "genicon" :onclick "scripts/widget_search --a"))))
+				
+
+
+;; marcador2
+(defwidget marcador2 [] 
+		(box :class "b"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/b.svg');" :class "genicon" :onclick "scripts/widget_search --b"))))
+				
+
+
+;; marcador3
+(defwidget marcador3 [] 
+		(box :class "c"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/c.svg');" :class "genicon" :onclick "scripts/widget_search --c"))))
+				
+
+;; marcador4
+(defwidget marcador4 [] 
+		(box :class "d"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/d.svg');" :class "genicon" :onclick "scripts/widget_search --d"))))
+				
+
+
+;; marcador5
+(defwidget marcador5 [] 
+		(box :class "e"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/e.svg');" :class "genicon" :onclick "scripts/widget_search --e"))))
+				
+
+
+;; marcador6
+(defwidget marcador6 [] 
+		(box :class "f"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/f.svg');" :class "genicon" :onclick "scripts/widget_search --f"))))
+				
+
+
+;; marcador7
+(defwidget marcador7 [] 
+		(box :class "g"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/g.svg');" :class "genicon" :onclick "scripts/widget_search --g"))))
+				
+
+
+;; marcador8
+(defwidget marcador8 [] 
+		(box :class "h"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/h.svg');" :class "genicon" :onclick "scripts/widget_search --h"))))
+				
+
+
+;; marcador9
+(defwidget marcador9 [] 
+		(box :class "i"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/i.svg');" :class "genicon" :onclick "scripts/widget_search --i"))))
+				
+
+
+;; marcador10
+(defwidget marcador10 [] 
+		(box :class "j"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/j.svg');" :class "genicon" :onclick "scripts/widget_search --j"))))
+				
+
+
+;; marcador11
+(defwidget marcador11 [] 
+		(box :class "k"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/k.svg');" :class "genicon" :onclick "scripts/widget_search --k"))))
+				
+
+
+;; marcador12a
+(defwidget marcador12a [] 
+		(box :class "l"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/l1.svg');" :class "genicon" :onclick "scripts/widget_search --extras1"))))
+
+				
+;; marcador12b
+(defwidget marcador12b [] 
+		(box :class "l"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/l2.svg');" :class "genicon" :onclick "scripts/widget_search --extras2"))))
+
+
+				
+;; nueva
+(defwidget nueva [] 
+		(box :class "l"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/l2.svg');" :class "genicon" :onclick "scripts/widget_search --extras2"))))
+				
+;; 
+
+
+
+;; search
+(defwidget search [] 
+		(box :class "dockbox"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+				(button :style "background-image: url('images/icons/search.svg');" :class "genicon" :onclick "scripts/widget_search --search")
+				(button :style "background-image: url('images/icons/dashboard.svg');" :class "genicon" :onclick "scripts/widget_search --menu")
+				(button :style "background-image: url('images/icons/captura.svg');" :class "genicon" :onclick "scripts/widget_search --captura")
+				(button :style "background-image: url('images/icons/seguridad.svg');" :class "genicon" :onclick "scripts/widget_search --security")
+				(button :style "background-image: url('images/icons/vpnon.svg');" :class "genicon" :onclick "scripts/widget_search --vpnon")
+				(button :style "background-image: url('images/icons/vpnoff.svg');" :class "genicon" :onclick "scripts/widget_search --vpnoff"))))
+
+;; search2
+(defwidget search2 [] 
+                (box :class "dockbox"
+                        (box :orientation "v" :spacing 15 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+                                (button :style "background-image: url('images/icons/search.svg');" :class "genicon" :onclick "scripts/widget_search --search")
+                                (button :style "background-image: url('images/icons/dashboard.svg');" :class "genicon" :onclick "scripts/widget_search --menu")
+                                (button :style "background-image: url('images/icons/captura.svg');" :class "genicon" :onclick "scripts/widget_search --captura")
+                                (button :style "background-image: url('images/icons/seguridad.svg');" :class "genicon" :onclick "scripts/widget_search --security")
+                                (button :style "background-image: url('images/icons/vpnon.svg');" :class "genicon" :onclick "scripts/widget_search --vpnon")
+                                (button :style "background-image: url('images/icons/vpnoff.svg');" :class "genicon" :onclick "scripts/widget_search --vpnoff"))))
+
+
+
+
+;; apps
+(defwidget apps [] 
+		(box :class "dockbox"
+			(box :orientation "h" :spacing 15 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+				(button :style "background-image: url('images/icons/apps/terminal.png');" :class "appicon" :onclick "scripts/widget_apps --tr")
+(button :style "background-image: url('images/icons/apps/files.png');" :class "appicon" :onclick "scripts/widget_apps --fm")				
+
+(button :style "background-image: url('images/icons/apps/firefox.png');" :class "appicon" :onclick "scripts/widget_apps --ff")
+				
+				(button :style "background-image: url('images/icons/apps/notes.png');" :class "appicon" :onclick "scripts/widget_apps --ge")
+				
+(button :style "background-image: url('images/icons/apps/reddit.png');" :class "appicon" :onclick "scripts/widget_apps --rd")
+(button :style "background-image: url('images/icons/apps/discord.png');" :class "appicon" :onclick "scripts/widget_apps --dc")
+				
+				(button :style "background-image: url('images/icons/apps/telegram.png');" :class "appicon" :onclick "scripts/widget_apps --tg"))))
+
+;; weather
+(defwidget weather [] 
+		(box :class "dockbox"
+			(box :class "clockbox" :orientation "v" :spacing 0 :valign "center" :halign "start" :space-evenly "false" :vexpand "false" :hexpand "false"
+				(label :class "time" :halign "start" :wrap "true" :limit-width 25 :text TIME)
+				(label :class "date" :halign "start" :wrap "true" :limit-width 25 :text DATE))
+			(box :class "weatherbox" :orientation "h" :spacing 0 :valign "center" :halign "end" :space-evenly "false" :vexpand "false" :hexpand "false"
+				(label :class "weathericon" :style "color: ${HEX};" :text ICON)
+				(label :class "weathertemp" :text TEMP))))
+
+;; system
+(defwidget system [] 
+		(box :class "dockbox"
+			(box :orientation "h" :spacing 16 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+				
+				(button :onclick "scripts/volume --toggle"
+					(box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+						(box :style "background-image: url('${VOLICON}');" :class "trayicon")
+							(label :class "infotext" :halign "start" :text VOLUME)))
+				(button :onclick "scripts/widget_apps --nm"
+					(box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+						(box :style "background-image: url('${WIFIICON}');" :class "trayicon")
+							(label :class "infotext" :halign "start" :text NETSTAT)))
+				(button :onclick "sidedar/toggle_sidebar"
+					(box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+						(box :style "background-image: url('${IMAGE}');" :class "face")
+							(label :class "infotext" :halign "start" :text USER))))))
+
+
+
+;; search3o
+(defwidget search3o [] 
+		(box :class "z"
+			(box :orientation "h" :spacing 7 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "infotext" :halign "" :text "")				
+(button :style "background-image: url('images/icons/menu.svg');" :class "appicon" :onclick "scripts/widget_search --menus" :dblclick "scripts/widget_search --captura" ))))
+	
+
+;; flechaupo
+(defwidget flechaupo [] 
+		(box :class "z"
+			(box :orientation "h" :spacing 30 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"				
+(label :class "" :halign "" :text "     ")
+(button :style "background-image: url('images/icons/f1.svg');" :class "flecha" :onclick "scripts/widget_search --marcadores2o" ))))
+	
+;; flechado
+(defwidget flechado [] 
+		(box :class "z"
+			(box :orientation "h" :spacing 30 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"				
+(label :class "" :halign "" :text "     ")
+(button :style "background-image: url('images/icons/f2.svg');" :class "flecha" :onclick "scripts/widget_search --marcadores1o"  ))))
+	
+
+
+;; marcador1o
+(defwidget marcador1o [] 
+		(box :class "a"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/a.svg');" :class "genicon" :onclick "scripts/widget_search --a"))))
+				
+
+
+;; marcador2o
+(defwidget marcador2o [] 
+		(box :class "b"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/b.svg');" :class "genicon" :onclick "scripts/widget_search --b"))))
+				
+
+
+;; marcador3o
+(defwidget marcador3o [] 
+		(box :class "c"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/c.svg');" :class "genicon" :onclick "scripts/widget_search --c"))))
+				
+
+;; marcador4o
+(defwidget marcador4o [] 
+		(box :class "d"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/d.svg');" :class "genicon" :onclick "scripts/widget_search --d"))))
+				
+
+
+;; marcador5o
+(defwidget marcador5o [] 
+		(box :class "e"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/e.svg');" :class "genicon" :onclick "scripts/widget_search --e"))))
+				
+
+
+;; marcador6o
+(defwidget marcador6o [] 
+		(box :class "f"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/f.svg');" :class "genicon" :onclick "scripts/widget_search --f"))))
+				
+
+
+;; marcador7ao
+(defwidget marcador7ao [] 
+		(box :class "g"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/l1.svg');" :class "genicon" :onclick "scripts/widget_search --extraso1"))))
+				
+
+
+;; marcador7bo
+(defwidget marcador7bo [] 
+		(box :class "g"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/l2.svg');" :class "genicon" :onclick "scripts/widget_search --extraso2"))))
+				
+
+
+;; marcador8o
+(defwidget marcador8o [] 
+		(box :class "h"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/h.svg');" :class "genicon" :onclick "scripts/widget_search --h"))))
+				
+
+
+;; marcador9o
+(defwidget marcador9o [] 
+		(box :class "i"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/i.svg');" :class "genicon" :onclick "scripts/widget_search --i"))))
+				
+
+
+;; marcador10o
+(defwidget marcador10o [] 
+		(box :class "j"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/j.svg');" :class "genicon" :onclick "scripts/widget_search --j"))))
+				
+
+
+;; marcador11o
+(defwidget marcador11o [] 
+		(box :class "k"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/k.svg');" :class "genicon" :onclick "scripts/widget_search --k"))))
+				
+
+
+;; marcador12ao
+(defwidget marcador12o [] 
+		(box :class "l"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/l1.svg');" :class "genicon" :onclick "scripts/widget_search --extras"))))
+				
+
+;; marcador12bo
+(defwidget marcador12o [] 
+		(box :class "l"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "left" :space-evenly "false" :vexpand "false" :hexpand "false"
+(label :class "" :halign "" :text " ")				
+(button :style "background-image: url('images/icons/l2.svg');" :class "genicon" :onclick "scripts/widget_search --extras"))))
+				
+
+
+;; searcho
+(defwidget searcho [] 
+		(box :class "dockbox"
+			(box :orientation "h" :spacing 13 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+				(button :style "background-image: url('images/icons/search.svg');" :class "genicon" :onclick "scripts/widget_search --search")
+				(button :style "background-image: url('images/icons/dashboard.svg');" :class "genicon" :onclick "scripts/widget_search --menu")
+				(button :style "background-image: url('images/icons/captura.svg');" :class "genicon" :onclick "scripts/widget_search --captura")
+				(button :style "background-image: url('images/icons/seguridad.svg');" :class "genicon" :onclick "scripts/widget_search --security")
+				(button :style "background-image: url('images/icons/vpnon.svg');" :class "genicon" :onclick "scripts/widget_search --vpnon")
+				(button :style "background-image: url('images/icons/vpnoff.svg');" :class "genicon" :onclick "scripts/widget_search --vpnoff"))))
+
+;; search2o
+(defwidget search2o [] 
+                (box :class "dockbox"
+                        (box :orientation "v" :spacing 15 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+                                (button :style "background-image: url('images/icons/search.svg');" :class "genicon" :onclick "scripts/widget_search --search")
+                                (button :style "background-image: url('images/icons/dashboard.svg');" :class "genicon" :onclick "scripts/widget_search --menu")
+                                (button :style "background-image: url('images/icons/captura.svg');" :class "genicon" :onclick "scripts/widget_search --captura")
+                                (button :style "background-image: url('images/icons/seguridad.svg');" :class "genicon" :onclick "scripts/widget_search --security")
+                                (button :style "background-image: url('images/icons/vpnon.svg');" :class "genicon" :onclick "scripts/widget_search --vpnon")
+                                (button :style "background-image: url('images/icons/vpnoff.svg');" :class "genicon" :onclick "scripts/widget_search --vpnoff"))))
+
+
+
+
+;; appso
+(defwidget appso [] 
+		(box :class "dockbox"
+			(box :orientation "h" :spacing 15 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+				(button :style "background-image: url('images/icons/apps/terminal.png');" :class "appicon" :onclick "scripts/widget_apps --tr")
+(button :style "background-image: url('images/icons/apps/files.png');" :class "appicon" :onclick "scripts/widget_apps --fm")				
+
+(button :style "background-image: url('images/icons/apps/firefox.png');" :class "appicon" :onclick "scripts/widget_apps --ff")
+				
+				(button :style "background-image: url('images/icons/apps/notes.png');" :class "appicon" :onclick "scripts/widget_apps --ge")
+				
+(button :style "background-image: url('images/icons/apps/reddit.png');" :class "appicon" :onclick "scripts/widget_apps --rd")
+(button :style "background-image: url('images/icons/apps/discord.png');" :class "appicon" :onclick "scripts/widget_apps --dc")
+				
+				(button :style "background-image: url('images/icons/apps/telegram.png');" :class "appicon" :onclick "scripts/widget_apps --tg"))))
+
+;; weathero
+(defwidget weathero [] 
+		(box :class "dockbox"
+			(box :class "clockbox" :orientation "v" :spacing 0 :valign "center" :halign "start" :space-evenly "false" :vexpand "false" :hexpand "false"
+				(label :class "time" :halign "start" :wrap "true" :limit-width 25 :text TIME)
+				(label :class "date" :halign "start" :wrap "true" :limit-width 25 :text DATE))
+			(box :class "weatherbox" :orientation "h" :spacing 0 :valign "center" :halign "end" :space-evenly "false" :vexpand "false" :hexpand "false"
+				(label :class "weathericon" :style "color: ${HEX};" :text ICON)
+				(label :class "weathertemp" :text TEMP))))
+
+;; systemo
+(defwidget systemo [] 
+		(box :class "dockbox"
+			(box :orientation "h" :spacing 10 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+				
+				(button :onclick "scripts/volume --toggle"
+					(box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+						(box :style "background-image: url('${VOLICON}');" :class "trayicon")
+							(label :class "infotext" :halign "start" :text VOLUME)))
+			(button :onclick "scripts/widget_apps --nm"
+				(box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+					(box :style "background-image: url('${WIFIICON}');" :class "trayicon")
+						(label :class "infotext" :halign "start" :text NETSTAT)))
+			(button :onclick "scripts/widget_apps --down"
+				(box :orientation "h" :spacing 0 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+					(box :style "background-image: url('images/icons/apps/down.png');" :class "face")
+						))
+			(button :onclick "scripts/widget_apps --up"
+				(box :orientation "h" :spacing 0 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+					(box :style "background-image: url('images/icons/apps/up.png');" :class "face")
+						))
+			(button :onclick "scripts/widget_apps --back"
+				(box :orientation "h" :spacing 0 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+					(box :style "background-image: url('images/icons/apps/back.png');" :class "face")
+						))
+
+
+			(button :onclick "scripts/widget_apps --play"
+				(box :orientation "h" :spacing 0 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+					(box :style "background-image: url('images/icons/apps/start.png');" :class "face")
+						))
+
+			(button :onclick "scripts/widget_apps --next"
+				(box :orientation "h" :spacing 0 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+					(box :style "background-image: url('images/icons/apps/next.png');" :class "face"))))))
+
+
+
+;; ** Windows *************************************************************************
+
+
+;; search3
+(defwindow search3
+           :monitor 1
+           :geometry (geometry :x "1847px"
+                               :y "40px"
+                               :width "280px"
+                               :height "70px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(search3))
+
+
+
+;; flechaup
+(defwindow flechaup
+           :monitor 1
+           :geometry (geometry :x "1847px"
+                               :y "113px"
+                               :width "280px"
+                               :height "30px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "0px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(flechaup))
+
+
+
+;; flechad
+(defwindow flechad
+           :monitor 1
+           :geometry (geometry :x "1847px"
+                               :y "113px"
+                               :width "280px"
+                               :height "30px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "0px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(flechad))
+
+
+;; marcador1
+(defwindow marcador1
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "146px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador1))
+
+
+;; marcador2
+(defwindow marcador2
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "199px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador2))
+
+
+;; marcador3
+(defwindow marcador3
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "252px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador3))
+
+
+
+
+;; marcador4
+(defwindow marcador4
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "305px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador4))
+
+
+;; marcador5
+(defwindow marcador5
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "358px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador5))
+
+
+;; marcador6
+(defwindow marcador6
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "411px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador6))
+
+
+
+
+;; marcador7
+(defwindow marcador7
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "464px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador7))
+
+
+;; marcador8
+(defwindow marcador8
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "517px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador8))
+
+
+;; marcador9
+(defwindow marcador9
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "570px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador9))
+
+
+
+;; marcador10
+(defwindow marcador10
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "623px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador10))
+
+
+;; marcador11
+(defwindow marcador11
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "676px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador11))
+
+
+;; marcador12a
+(defwindow marcador12a
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "729px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador12a))
+
+;; marcador12b
+(defwindow marcador12b
+           :monitor 1
+           :geometry (geometry :x "1863px"
+                               :y "729px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador12b))
+
+
+
+
+
+
+
+;; search
+(defwindow search
+           :monitor 0
+           :geometry (geometry :x "994px"
+                               :y "73px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(search))
+
+
+
+;; search2
+(defwindow search2
+           :monitor 1
+           :geometry (geometry :x "1000px"
+                               :y "73px"
+                               :width "400px"
+                               :height "400px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(search2))
+
+
+
+;; apps
+(defwindow apps
+           :monitor 0
+           :geometry (geometry :x "875px"
+                               :y "5px"
+                               :width "400px"
+                               :height "60px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(apps))
+
+;; weather
+(defwindow weather
+           :monitor 1
+           :geometry (geometry :x "1615px"
+                               :y "877px"
+                               :width "300px"
+                               :height "60px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+	
+(weather))
+
+
+;; system
+(defwindow system
+           :monitor 1
+           :geometry (geometry :x "1525px"
+                               :y "940px"
+                               :width "390px"
+                               :height "40px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(system))
+
+
+
+
+
+
+;; search3o
+(defwindow search3o
+           :monitor 0
+           :geometry (geometry :x "1202px"
+                               :y "40px"
+                               :width "280px"
+                               :height "70px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(search3o))
+
+
+
+;; flechaupo
+(defwindow flechaupo
+           :monitor 0
+           :geometry (geometry :x "1202px"
+                               :y "113px"
+                               :width "280px"
+                               :height "30px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "0px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(flechaupo))
+
+
+
+;; flechado
+(defwindow flechado
+           :monitor 0
+           :geometry (geometry :x "1202px"
+                               :y "113px"
+                               :width "280px"
+                               :height "30px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "0px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(flechado))
+
+
+;; marcador1o
+(defwindow marcador1o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "146px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador1o))
+
+
+;; marcador2o
+(defwindow marcador2o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "199px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador2o))
+
+
+;; marcador3o
+(defwindow marcador3o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "252px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador3o))
+
+
+
+
+;; marcador4o
+(defwindow marcador4o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "305px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador4o))
+
+
+;; marcador5o
+(defwindow marcador5o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "358px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador5o))
+
+
+;; marcador6o
+(defwindow marcador6o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "411px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador6o))
+
+
+
+
+;; marcador7ao
+(defwindow marcador7ao
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "464px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador7ao))
+
+
+
+
+;; marcador7bo
+(defwindow marcador7bo
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "464px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador7bo))
+
+
+;; marcador8o
+(defwindow marcador8o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "517px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador8o))
+
+
+;; marcador9o
+(defwindow marcador9o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "570px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador9o))
+
+
+
+;; marcador10o
+(defwindow marcador10o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "623px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador10o))
+
+
+;; marcador11o
+(defwindow marcador11o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "676px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador11o))
+
+
+;; marcador12o
+(defwindow marcador12o
+           :monitor 0
+           :geometry (geometry :x "1224px"
+                               :y "729px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(marcador12o))
+
+
+
+
+
+
+
+;; searcho
+(defwindow searcho
+           :monitor 0
+           :geometry (geometry :x "994px"
+                               :y "73px"
+                               :width "280px"
+                               :height "50px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(searcho))
+
+
+
+;; search2o
+(defwindow search2o
+           :monitor 0
+           :geometry (geometry :x "1000px"
+                               :y "73px"
+                               :width "400px"
+                               :height "400px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(search2o))
+
+
+
+;; appso
+(defwindow appso
+           :monitor 0
+           :geometry (geometry :x "875px"
+                               :y "5px"
+                               :width "400px"
+                               :height "60px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(appso))
+
+;; weathero
+(defwindow weathero
+           :monitor 0
+           :geometry (geometry :x "1100px"
+                               :y "550px"
+                               :width "300px"
+                               :height "60px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+	
+(weathero))
+
+
+;; systemo
+(defwindow systemo
+           :monitor 0
+           :geometry (geometry :x "890px"
+                               :y "615px"
+                               :width "390px"
+                               :height "40px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(systemo))
+

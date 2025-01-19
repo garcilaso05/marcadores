@@ -1,0 +1,348 @@
+/** Global *******************************************/
+*{
+	all: unset;
+	font-family: feather;
+	font-family: "JetBrains Mono";
+
+
+}
+
+/** Bar ***********************************/
+.dockbox {
+	background-color: #F5EEE6;
+	border: 1px solid #161616;
+	border-radius: 12px;
+background-color: #3F3F3F;
+	color: #7b7d7d ;
+	border-color: #F8F9F9;
+	opacity: 0.75;
+	
+}
+
+.z {
+	background-color: #F5EEE6;
+	border: 1px solid #161616;
+	border-radius: 12px;
+background-color: #6E6E6E;
+	color: #7b7d7d ;
+	border-color: #F8F9F9;
+	opacity: 0.75;
+	
+}
+
+.a {
+	background-color: #F5EEE6;
+	border: 1px solid #161616;
+	border-radius: 12px;
+background-color: #A8C7E6;
+	color: #7b7d7d ;
+	border-color: #F8F9F9;
+	opacity: 0.75;
+	
+}
+
+.b {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color: #7F9DC9;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+
+.c {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color: #6D8ACD;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+
+.d {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color: #73c6b6 ;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+
+.e {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color:  #27ae60;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+
+.f {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color:   #5ec30d ;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+
+
+.g {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color:  #adc30d ;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+
+.h {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color:     #c3ac0d ;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+
+
+.i {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color:   #c38a0d ;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+
+.j {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color:    #c3670d ;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+
+
+.k {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color:   #c33d0d ;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+
+.l {
+        background-color: #F5EEE6;
+        border: 1px solid #161616;
+        border-radius: 12px;
+background-color:    #c30d0d ;
+        color: #7b7d7d ;
+        border-color: #F8F9F9;
+        opacity: 0.75;
+
+}
+
+.dockbox {
+	background-color: #F5EEE6;
+	border: 1px solid #161616;
+	border-radius: 12px;
+background-color: #3F3F3F;
+	color: #7b7d7d ;
+	border-color: #F8F9F9;
+	opacity: 0.75;
+	
+}
+
+/** Icons ***********************************/
+.genicon {
+    background-repeat: no-repeat;
+	background-size: 30px;
+	min-height: 30px;
+	min-width: 30px;
+}
+
+.appicon {
+    background-repeat: no-repeat;
+	background-size: 40px;
+	min-height: 40px;
+	min-width: 40px;
+}
+
+
+.flecha {
+    background-repeat: no-repeat;
+	background-size: 21px;
+	min-height: 21px;
+	min-width: 21px;
+}
+
+
+.workspace {
+	background-color: #bbbcdd;
+	color: #bbbcdd;
+	border: 2px solid #161616;
+	border-radius: 16px;
+	font-size : 14px;
+	padding: 0px 6px 0px 6px;
+	margin: -2px 0px 0px 0px;
+	font-weight : bold;
+}
+
+/** Clock ********************************************/
+.clockbox {
+	margin : 0px 0px 0px 15px;
+	
+}
+
+.time {
+	font-size : 14px;
+	font-weight : bold;
+	color: #F5F5F5;
+}
+
+.date {
+	font-size : 12px;
+	font-weight : bold;
+	color: #F5F5F5 ;
+}
+
+/** Weather ********************************************/
+.weatherbox {
+	margin : 0px 0px 0px 10px;
+	background-color: #bbbcdd;
+	color: #bbbcdd;
+
+
+
+
+}
+
+.weathericon {
+	font-family: Iosevka Nerd Font;
+	font-size : 32px;
+	font-weight : normal;
+	
+}
+
+.weathertemp {
+	font-size : 14px;
+	font-weight : bold;
+	margin : 0px 0px 0px -5px;
+}
+
+/** Music *************************************************/
+.album_art {
+    background-repeat: no-repeat;
+	background-size: 40px;
+	min-height: 40px;
+	min-width: 40px;
+	margin: 8px;
+	border-radius: 8px;
+}
+
+.musicbox {
+	margin : 0px 0px 0px 5px;
+}
+
+.song {
+	font-size : 14px;
+	font-weight : bold;
+	color: #F5F5F5;
+}
+
+.artist {
+	font-size : 12px;
+	font-weight : bold;
+	color: #F5F5F5;
+}
+
+.musicbuttons {
+	margin : 0px 0px 0px -90px;
+}
+
+.playbutton {
+    background-repeat: no-repeat;
+	background-size: 24px;
+	min-height: 24px;
+	min-width: 24px;
+	margin: 0px;
+}
+
+.trackbutton {
+    background-repeat: no-repeat;
+	background-size: 18px;
+	min-height: 18px;
+	min-width: 18px;
+	margin: 3px 0px 0px 0px;
+}
+
+/** System *************************************************/
+.mails {
+	background-color: #FFC8C8;
+	border: 0px solid #161616;
+	border-radius: 16px;
+	font-size : 14px;
+	padding: 0px 5px 0px 5px;
+	margin: 10px 0px 10px 0px;
+	font-weight : bold;
+}
+
+.trayicon {
+    background-repeat: no-repeat;
+	background-size: 24px;
+	min-height: 24px;
+	min-width: 24px;
+	margin: 8px 0px 0px 0px;
+}
+
+.infotext {
+
+	font-size : 15px;
+	padding: 0px 5px 0px 5px;
+	margin: 10px 0px 10px 0px;
+	font-weight : bold;
+color: #F5F5F5;
+}
+
+.face {
+	background-size: 24px;
+	min-height: 24px;
+	min-width: 24px;
+	margin: 8px 0px 8px 0px;
+	border-radius: 0%;
+}
+
+/** EOF *************************************************/
